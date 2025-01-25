@@ -1,0 +1,10 @@
+# Ignorar pastas comuns
+casos-de-testes-automatizados
+
+# Ignorar arquivos específicos
+*.log
+
+# Ignorar arquivos de compilação
+*.exe
+*.dll
+*.class
