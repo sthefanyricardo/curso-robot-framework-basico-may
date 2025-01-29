@@ -22,6 +22,6 @@ Caso de Teste 02 - Pesquisa de um Produto
   [Documentation]  Teste que verifica a busca de produto no site da Amazon e verifica se o produto pesquisado foi listado
   [Tags]  CT02  busca_produto  lista_produto
   Dado que estou na home page da Amazon.com.br
-  Quando pesquisar pelo produto "fone de ouvido bluetooth"
-	Então o título da página deve ficar "Amazon.com.br : fone de ouvido bluetooth"
-  E um produto da linha "fone de ouvido bluetooth" deve ser mostrado na página
+  Quando pesquisar pelo produto "Xbox Series S"
+	Então o título da página deve ficar "Amazon.com.br : Xbox Series S"
+  E um produto da linha "Xbox Series S" deve ser mostrado na página
