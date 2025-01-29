@@ -2,6 +2,7 @@
 Documentation  Esta suíte de testes verifica as funcionalidades do site Amazon.com.br
 ...  Autora:  Sthefany Albuquerque Ricardo
 ...  Data:  28/01/2025
+Resource  ../resource/amazon_testes.resource
 Test Setup  Abrir o navegador
 Test Teardown  Fechar o navegador
 
