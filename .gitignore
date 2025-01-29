@@ -1,5 +1,6 @@
 # Ignorar pastas comuns
 casos-de-testes-automatizados
+results
 
 # Ignorar arquivos específicos
 *.log
