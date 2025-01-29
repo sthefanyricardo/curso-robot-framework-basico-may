@@ -14,6 +14,7 @@ ${CAMPO_PESQUISA}  twotabsearchtextbox
 ${BTN_CAMPO_PESQUISA}  nav-search-submit-button
 
 *** keywords ***
+###  KEYWORDS SETUP E TEARDOWN ###
 Abrir o navegador
   [Documentation]  keyword responsável por abrir o navegador escolhido
   Open Browser  browser=chrome  options=add_experimental_option("detach", True)
@@ -24,6 +25,7 @@ Fechar o navegador
   Capture Page Screenshot
   Close Browser
 
+###  KEYWORDS TESTE PROCEDURAIS ###
 Acessar a home page do site Amazon.com.br
   [Documentation]  keyword responsável por acessar a home page do site Amazon
   Go To  url=${URL_AMAZON}
@@ -58,3 +60,24 @@ Clicar no botão de pesquisa
 Verificar o resultado da pesquisa se está listando o produto "${NOME_PRODUTO}"
   [Documentation]  keyword responsável por verificar se o produto pesquisado foi listado na página de resultados da pesquisa
   Wait Until Element Is Visible  locator=//*[text()='${NOME_PRODUTO}']
+
+###  KEYWORDS TESTE GHERKIN  BDD ###
+Dado que estou na home page da Amazon.com.br
+  [Documentation]  keyword responsável por chamar as keywords para acessar a home page do site Amazon
+  ...  e verificar o título da página
+  Acessar a home page do site Amazon.com.br
+  Verificar se o título da página fica "Amazon.com.br | Tudo pra você, de A a Z."
+
+Quando acessar o menu "Eletrônicos"
+  [Documentation]  keyword responsável por chamar a keyword para acessar a categoria Eletrônicos no menu da home page do site Amazon
+  Entrar no menu "Eletrônicos"
+
+Então o título da página deve ficar "${TITULO_PAGINA}"
+  [Documentation]  keyword responsável por chamar a keyword para verificar o título atual da página
+  Verificar se o título da página fica "${TITULO_PAGINA}"
+
+E o texto "${TEXTO_TITULO_PAGINA_ELETRONICOS}" deve ser exibido na página
+    Verificar se aparece a frase "${TEXTO_TITULO_PAGINA_ELETRONICOS}"
+
+E a categoria "${NOME_CATEGORIA}" deve ser exibida na página
+  Verificar se aparece a categoria "${NOME_CATEGORIA}"
