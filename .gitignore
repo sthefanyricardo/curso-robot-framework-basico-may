@@ -5,6 +5,7 @@ results
 
 # Ignorar arquivos específicos
 *.log
+*.txt
 interactive_console_output.xml
 .vscode
 launch.json
