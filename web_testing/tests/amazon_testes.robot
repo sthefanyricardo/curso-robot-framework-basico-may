@@ -1,5 +1,6 @@
 *** Settings ***
-Documentation  Esta suíte de testes verifica as funcionalidades do site Amazon.com.br
+Documentation  Esta suíte de testes verifica as funcionalidades do site Amazon.com.br - 
+...  Exempos de Casos de Teste Procedural
 ...  Autora:  Sthefany Albuquerque Ricardo
 ...  Data:  28/01/2025
 Resource  ../resource/amazon_testes.resource
