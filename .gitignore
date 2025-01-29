@@ -1,5 +1,6 @@
 # Ignorar pastas comuns
 exemplos-casos-de-testes
+HTML_Locators
 results
 
 # Ignorar arquivos específicos
