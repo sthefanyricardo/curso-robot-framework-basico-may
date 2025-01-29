@@ -73,11 +73,13 @@ Quando acessar o menu "Eletrônicos"
   Entrar no menu "Eletrônicos"
 
 Então o título da página deve ficar "${TITULO_PAGINA}"
-  [Documentation]  keyword responsável por chamar a keyword para verificar o título atual da página
+  [Documentation]  keyword responsável por chamar a keyword que verificar o título atual da página
   Verificar se o título da página fica "${TITULO_PAGINA}"
 
 E o texto "${TEXTO_TITULO_PAGINA_ELETRONICOS}" deve ser exibido na página
+  [Documentation]  keyword responsável por chamar a keyword que verificar se aparece a frase "Eletrônicos e Tecnologia" na página de Eletrônicos
     Verificar se aparece a frase "${TEXTO_TITULO_PAGINA_ELETRONICOS}"
 
 E a categoria "${NOME_CATEGORIA}" deve ser exibida na página
+  [Documentation]  keyword responsável por chamar a keyword que verificar se aparece a categoria "Computadores e Informática" na página de Eletrônicos
   Verificar se aparece a categoria "${NOME_CATEGORIA}"
