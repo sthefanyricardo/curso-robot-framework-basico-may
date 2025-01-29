@@ -28,14 +28,14 @@ Acessar a home page do site Amazon.com.br
   Go To  url=${URL_AMAZON}
   Wait Until Element Is Visible  locator=${MENU_CATEGORIAS}
 
-Entrar no menu "${NOME_MENU}"
+Entrar no menu "${NOME_CATEGORIA_MENU}"
   [Documentation]  keyword responsável por acessar a categoria Eletrônicos no menu da home page do site Amazon
-  Click Element  locator=//a[contains(text(),'${NOME_MENU}')]
+  Click Element  locator=//a[contains(text(),'${NOME_CATEGORIA_MENU}')]
 
 Verificar se aparece a frase "${TITULO_PAGINA_ELETRONICOS}"
   [Documentation]  keyword responsável por verificar se aparece a frase "Eletrônicos e Tecnologia" na página de Eletrônicos
   Wait Until Page Contains  text=${TITULO_PAGINA_ELETRONICOS}
-  Wait Until Element Is Visible  locator=//h2[.//span[text()='${TITULO_PAGINA_ELETRONICOS}']]
+  Wait Until Element Is Visible  locator=//span[text()='${TITULO_PAGINA_ELETRONICOS}']
 
 Verificar se o título da página fica "${TITULO_PAGINA}"
   [Documentation]  keyword responsável por verificar se o título da página atual é "Eletrônicos e Tecnologia | Amazon.com.br"
@@ -65,9 +65,9 @@ Dado que estou na home page da Amazon.com.br
   Acessar a home page do site Amazon.com.br
   Verificar se o título da página fica "Amazon.com.br | Tudo pra você, de A a Z."
 
-Quando acessar o menu "Eletrônicos"
+Quando acessar o menu "${NOME_CATEGORIA}"
   [Documentation]  keyword responsável por chamar a keyword para acessar a categoria Eletrônicos no menu da home page do site Amazon
-  Entrar no menu "Eletrônicos"
+  Entrar no menu "${NOME_CATEGORIA}"
 
 Então o título da página deve ficar "${TITULO_PAGINA}"
   [Documentation]  keyword responsável por chamar a keyword que verificar o título atual da página
@@ -77,6 +77,11 @@ E o texto "${TEXTO_TITULO_PAGINA_ELETRONICOS}" deve ser exibido na página
   [Documentation]  keyword responsável por chamar a keyword que verificar se aparece a frase "Eletrônicos e Tecnologia" na página de Eletrônicos
     Verificar se aparece a frase "${TEXTO_TITULO_PAGINA_ELETRONICOS}"
 
-E a categoria "${NOME_CATEGORIA}" deve ser exibida na página
-  [Documentation]  keyword responsável por chamar a keyword que verificar se aparece a categoria "Computadores e Informática" na página de Eletrônicos
-  Verificar se aparece a categoria "${NOME_CATEGORIA}"
+Quando pesquisar pelo produto "${NOME_PRODUTO}"
+  [Documentation]  keyword responsável por chamar as keywords para pesquisar pelo produto "Xbox Series S"
+  Digitar o nome de produto "${NOME_PRODUTO}" no campo de pesquisa
+  Clicar no botão de pesquisa
+
+E um produto da linha "${NOME_PRODUTO}" deve ser mostrado na página
+  [Documentation]  keyword responsável por chamar a keyword que verificar se o produto pesquisado foi listado na página de resultados da pesquisa
+  Verificar o resultado da pesquisa se está listando o produto "${NOME_PRODUTO}"
