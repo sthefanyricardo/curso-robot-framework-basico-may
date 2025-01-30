@@ -7,8 +7,15 @@ Library  SeleniumLibrary
 *** Variables ***
 ${BROWSER}  chrome
 ${URL_AMAZON}  https://www.amazon.com.br/
-${MENU_CATEGORIAS}  //div[@id='nav-main']//div[@class='nav-fill']
+${MENU_CATEGORIAS}  //div[@id='nav-main']
 ${SUBCATEGORIA_COMPUTADORES_E_INFORMATICA}  //li[@class='a-carousel-card dcl-carousel-element']//div[@class='a-cardui-footer dcl-card-footer']
+${TEXTO_ADICIONADO_CARRINHO}  //h1[contains(text(),'Adicionado ao carrinho')]
+${BTN_ADICIONAR_CARRINHO}  //span[@id='sw-gtc']//a
+${BTN_REMOVER_CARRINHO}  //input[@type='submit' and @value='Excluir']
+${MENSAGEM_EXCLUSAO_PRODUTO}  //span[@class='a-size-base sc-list-item-removed-msg-text-delete'][contains(., 'foi removido de Carrinho de compras')]
+${MENSAGEM_CARRINHO_VAZIO}  //h3[@class='a-size-large a-spacing-top-base sc-your-amazon-cart-is-empty'][contains(., 'Seu carrinho da Amazon está vazio')]
+${TEXTO_GARANTIA_ESTENDIDA_PRODUTO}  //span[@id='attach-warranty-displayTitle' and contains(text(), 'Garantia Estendida de 12 meses')]
+${BTN_GARANTIA_ESTENDIDA_PRODUTO}  //input[@class='a-button-input' and @type='submit' and @aria-labelledby='attachSiNoCoverage-announce']
 
 *** keywords ***
 ###  KEYWORDS SETUP E TEARDOWN ###
@@ -56,7 +63,33 @@ Clicar no botão de pesquisa
 
 Verificar o resultado da pesquisa se está listando o produto "${NOME_PRODUTO}"
   [Documentation]  keyword responsável por verificar se o produto pesquisado foi listado na página de resultados da pesquisa
-  Wait Until Element Is Visible  locator=//*[text()='${NOME_PRODUTO}']
+  Wait Until Element Is Visible  locator=//h2/span[text()='${NOME_PRODUTO}']
+
+Adicionar o produto "${NOME_PRODUTO}" no carrinho
+  [Documentation]  keyword responsável por adicionar o produto "Xbox Series S" no carrinho de compras
+  Click Element  locator=//h2/span[text()='${NOME_PRODUTO}']
+  Verificar se o título da página fica "Xbox Series S : Amazon.com.br: Games e Consoles"
+  Wait Until Element Is Visible  locator=add-to-cart-button
+  Click Element  locator=add-to-cart-button
+  ${STATUS}  Run Keyword And Return Status  Element Should Be Visible  locator=${TEXTO_GARANTIA_ESTENDIDA_PRODUTO}
+  Run Keyword If  '${STATUS}' == 'True'  Click Element  locator=${BTN_GARANTIA_ESTENDIDA_PRODUTO}
+  Wait Until Element Is Visible  locator=${TEXTO_ADICIONADO_CARRINHO}
+
+Verificar se o produto "${NOME_PRODUTO}" foi adicionado com sucesso
+  [Documentation]  keyword responsável por verificar se o produto "Xbox Series S" foi adicionado com sucesso no carrinho de compras
+  Click Element  locator=${BTN_ADICIONAR_CARRINHO}
+  Verificar se o título da página fica "Carrinho de compras da Amazon.com"
+  Wait Until Element Is Visible  locator=//span[contains(@class, 'a-truncate-cut') and contains(text(), '${NOME_PRODUTO}')]
+  
+Remover o produto "${NOME_PRODUTO}" do carrinho
+  [Documentation]  keyword responsável por remover o produto "Xbox Series S" do carrinho de compras
+  Click Element  locator=${BTN_REMOVER_CARRINHO}
+
+Verificar se o carrinho fica vazio
+  [Documentation]  keyword responsável por verificar se o carrinho de compras está vazio
+  Page Should Contain Element  locator=${MENSAGEM_EXCLUSAO_PRODUTO}
+  Reload Page
+  Wait Until Element Is Visible  locator=${MENSAGEM_CARRINHO_VAZIO}
 
 ###  KEYWORDS TESTE GHERKIN  BDD ###
 Dado que estou na home page da Amazon.com.br
