@@ -33,12 +33,12 @@ O objetivo do curso é introduzir os participantes ao mundo da automação de te
 O repositório está organizado da seguinte forma:
 
 **curso-robot-framework-basico-may/**
-├── web_testing/ # Exemplos e exercícios de automação web
-│ ├── resources/ # Arquivos de recursos (variáveis, keywords)
-│ ├── tests/ # Casos de teste
-│ └── results/ # Resultados de execução (logs, reports)
-├── .gitignore # Arquivos e pastas ignorados pelo Git
-└── README.md # Documentação do repositório
+├── web_testing/                  # Exemplos e exercícios de automação web
+│   ├── resources/                # Arquivos de recursos (variáveis, keywords)
+│   ├── tests/                    # Casos de teste
+│   └── results/                  # Resultados de execução (logs, reports)
+├── .gitignore                    # Arquivos e pastas ignorados pelo Git
+└── README.md                     # Documentação do repositório
 
 ## Conteúdo do Repositório
 - **web_testing/**: Esta pasta contém os scripts de teste e exemplos relacionados aos testes de interface web. Os arquivos .robot são os scripts de teste em si, escritos na linguagem de palavras-chave (keywords) do Robot Framework.
@@ -52,4 +52,5 @@ O repositório está organizado da seguinte forma:
 
 ## 🙋‍♀️ Autora
 Feito com ❤️ por Sthefany A. Ricardo.
+
 📅 Última atualização: Janeiro de 2025.
