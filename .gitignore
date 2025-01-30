@@ -2,7 +2,6 @@
 exemplos-casos-de-testes
 HTML_Locators
 results
-resultados
 
 # Ignorar arquivos específicos
 *.log
