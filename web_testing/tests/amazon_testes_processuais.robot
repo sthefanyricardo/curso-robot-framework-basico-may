@@ -29,7 +29,7 @@ Caso de Teste 02 - Pesquisa de um Produto
   Clicar no botão de pesquisa
 	Verificar o resultado da pesquisa se está listando o produto "Xbox Series S"
 
-### DESAFIOS ###
+### DESAFIOS DE TESTE###
 Caso de Teste 03 - Adicionar Produto no Carrinho
     [Documentation]  Teste que verifica a inclusão de um produto no carrinho de compras do site Amazon
     [Tags]  CT03  adicionar_carrinho
