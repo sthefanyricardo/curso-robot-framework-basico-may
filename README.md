@@ -1,6 +1,6 @@
 # Automação de Testes com Robot Framework - Nível Básico
 
-Este repositório contém os arquivos e exemplos desenvolvidos durante o curso de [Automação de Testes com Robot Framework - Nível Básico da Udemy](https://www.udemy.com/course/automacao-de-testes-com-robot-framework-basico/), ministrado por Mayara "May" Fernandes. 
+Este repositório contém os arquivos de exemplos e desafio de exercícios, desenvolvidos durante o curso de [Automação de Testes com Robot Framework - Nível Básico da Udemy](https://www.udemy.com/course/automacao-de-testes-com-robot-framework-basico/), ministrado por Mayara "May" Fernandes. 
 
 ## 📚 Sobre o Curso
 
@@ -19,12 +19,12 @@ O objetivo do curso é introduzir os participantes ao mundo da automação de te
 
 ## 🛠️ Tecnologias Utilizadas
 
-- **Robot Framework**: Framework de automação de testes.
-- **SeleniumLibrary**: Biblioteca para automação de testes web.
-- **RequestsLibrary**: Biblioteca para automação de testes de API.
 - **Python**: Linguagem de programação base para o Robot Framework.
 - **Git e GitHub**: Controle de versão e compartilhamento de código.
 - **Visual Studio Code**: IDE utilizada para desenvolvimento.
+- **Robot Framework**: Framework de automação de testes.
+- **SeleniumLibrary**: Biblioteca para automação de testes web.
+- **RequestsLibrary**: Biblioteca para automação de testes de API.
 
 ---
 
