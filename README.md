@@ -28,7 +28,10 @@ O objetivo do curso é introduzir os participantes ao mundo da automação de te
 
 ---
 
-## 📂 Estrutura do Repositório
+## 📁 Conteúdo do Repositório
+- **web_testing/**: Esta pasta contém os scripts de teste e exemplos relacionados aos testes de interface web. Os arquivos .robot são os scripts de teste em si, escritos na linguagem de palavras-chave (keywords) do Robot Framework.
+  
+### 📂 Estrutura do Repositório
 
 O repositório está organizado da seguinte forma:
 
@@ -41,9 +44,6 @@ curso-robot-framework-basico-may/
 ├── .gitignore                    # Arquivos e pastas ignorados pelo Git
 └── README.md                     # Documentação do repositório
 ```
-
-## Conteúdo do Repositório
-- **web_testing/**: Esta pasta contém os scripts de teste e exemplos relacionados aos testes de interface web. Os arquivos .robot são os scripts de teste em si, escritos na linguagem de palavras-chave (keywords) do Robot Framework.
 
 ## 📌 Agradecimentos
 - À instrutora May Fernandes pelo curso incrível e pelo compartilhamento de conhecimento.
