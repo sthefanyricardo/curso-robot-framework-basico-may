@@ -134,11 +134,8 @@ Então o produto "${NOME_PRODUTO}" deve ser mostrado no carrinho
 
 E existe o produto "${NOME_PRODUTO}" no carrinho
   [Documentation]  keyword responsável por chamar a keyword que verificar se o produto "Xbox Series S" foi adicionado com sucesso no carrinho de compras
-  Digitar o nome de produto "${NOME_PRODUTO}" no campo de pesquisa
-  Clicar no botão de pesquisa
-  Verificar o resultado da pesquisa se está listando o produto "${NOME_PRODUTO}"
-  Adicionar o produto "${NOME_PRODUTO}" no carrinho
-  Verificar se o produto "${NOME_PRODUTO}" foi adicionado com sucesso
+  Quando adicionar o produto "${NOME_PRODUTO}" no carrinho
+  Então o produto "${NOME_PRODUTO}" deve ser mostrado no carrinho
 
 Quando remover o produto "${NOME_PRODUTO}" do carrinho
   [Documentation]  keyword responsável por chamar as keywords para remover o produto "Xbox Series S" do carrinho de compras
