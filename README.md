@@ -66,19 +66,19 @@ curso-robot-framework-basico-may/
 
 ## 🤖 Como Executar os Testes
 #### 🔧 Pré-requisitos (Configuração do Ambiente)
-  1. Instalação do Python:
-   1.1. Certifique-se de ter o Python instalado (versão 3.7 ou superior). [Download do Python](https://www.python.org/downloads/)
-  2. Instalação do WebDriver:
-   2.1. Baixe o WebDriver correspondente ao seu navegador (ex: [ChromeDriver para Google Chrome](https://googlechromelabs.github.io/chrome-for-testing/) ou [EdgeDriver para o Microsoft Edge](https://developer.microsoft.com/pt-br/microsoft-edge/tools/webdriver)).
-   2.2. Certifique-se de que o caminho para as pastas e/ou arquivos do WebDriver, esteja no PATH do sistema. 
-  3. Instalação das dependências do projeto:
-   3.1. Abra o terminal na raiz do projeto e execute o seguinte comando:
-     ```bash
-     pip install -r requirements.txt
-     ```
-     Isso instalará todas as dependências listadas no arquivo.
-   3.2. Verifique a instalação:
-   Após a instalação, você pode verificar se tudo está funcionando corretamente executando um dos testes do seu projeto.
+  1. **Instalação do Python:**
+     - Certifique-se de ter o Python instalado (versão 3.7 ou superior). [Download do Python](https://www.python.org/downloads/)
+  2. **Instalação do WebDriver:**
+     - Baixe o WebDriver correspondente ao seu navegador (ex: [ChromeDriver para Google Chrome](https://googlechromelabs.github.io/chrome-for-testing/) ou [EdgeDriver para o Microsoft Edge](https://developer.microsoft.com/pt-br/microsoft-edge/tools/webdriver)).
+     - Certifique-se de que o caminho para as pastas e/ou arquivos do WebDriver, esteja no PATH do sistema. 
+  3. **Instalação das dependências do projeto:**
+     - Abra o terminal na raiz do projeto e execute o seguinte comando:
+       ```bash
+       pip install -r requirements.txt
+       ```
+       Isso instalará todas as dependências listadas no arquivo.
+     - **Verifique a instalação:**
+       Após a instalação, você pode verificar se tudo está funcionando corretamente executando um dos testes do seu projeto.
 
 #### 📊 Executando os Testes
 1. Clone o repositório:
