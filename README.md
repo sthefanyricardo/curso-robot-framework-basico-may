@@ -87,10 +87,10 @@ curso-robot-framework-basico-may/
 ```
 2. Pelo terminal ou IDE, navegue até a pasta desejada do projeto, como no exemplo abaixo:
 ```bash
-   cd curso-robot-framework-basico-may/web_testing
+   cd curso-robot-framework-basico-may/testes_web
 ```
 3. Execute os testes, com os exemplos de comandos a seguir:
-- Dentro da pasta: web_testing/tests
+- Dentro da pasta: testes_web/tests
 ```bash
    robot -d ../resultados -i CT01ORCT04 tests/
 ```
@@ -100,7 +100,7 @@ curso-robot-framework-basico-may/
 ```bash
    robot -d ../resultados e- CT02ORCT03 tests/
 ```
-- Apenas dentro da pasta: web_testing
+- Apenas dentro da pasta: testes_web
 ```bash
    robot -d ../resultados tests/
 ```
