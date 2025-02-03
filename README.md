@@ -29,7 +29,7 @@ O objetivo do curso é introduzir os participantes ao mundo da automação de te
 ---
 
 ## 📁 Conteúdo do Repositório  
-#### 📂 Estrutura do Repositório
+#### Estrutura do Repositório
 
 O repositório está organizado da seguinte forma:
 
@@ -53,7 +53,7 @@ curso-robot-framework-basico-may/
 ## 🤖 Como Executar os Testes
 #### 🔧 Pré-requisitos (Configuração do Ambiente)
   1. Instalação do Python:
-    1.1 Certifique-se de ter o Python instalado (versão 3.7 ou superior). [Download do Python](https://www.python.org/downloads/)
+    - 1.1 Certifique-se de ter o Python instalado (versão 3.7 ou superior). [Download do Python](https://www.python.org/downloads/)
   2. Instalação do WebDriver:
     2.1 Baixe o WebDriver correspondente ao seu navegador (ex: [ChromeDriver para Google Chrome](https://googlechromelabs.github.io/chrome-for-testing/) ou [EdgeDriver para o Microsoft Edge](https://developer.microsoft.com/pt-br/microsoft-edge/tools/webdriver)).
     2.2 Certifique-se de que o caminho para as pastas e/ou arquivos do WebDriver, esteja no PATH do sistema. 
