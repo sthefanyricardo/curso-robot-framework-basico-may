@@ -28,10 +28,8 @@ O objetivo do curso é introduzir os participantes ao mundo da automação de te
 
 ---
 
-## 📁 Conteúdo do Repositório
-- **web_testing/**: Esta pasta contém os scripts de teste e exemplos relacionados aos testes de interface web. Os arquivos .robot são os scripts de teste em si, escritos na linguagem de palavras-chave (keywords) do Robot Framework.
-  
-### 📂 Estrutura do Repositório
+## 📁 Conteúdo do Repositório  
+#### 📂 Estrutura do Repositório
 
 O repositório está organizado da seguinte forma:
 
@@ -45,6 +43,13 @@ curso-robot-framework-basico-may/
 ├── .gitignore                    # Arquivos e pastas ignorados pelo Git
 └── README.md                     # Documentação do repositório
 ```
+
+#### Descrição das Pastas
+- `web_testing/`: Contém os scripts de teste e exemplos relacionados aos testes de interface web. Os arquivos .robot são os scripts de teste escritos na linguagem de palavras-chave (keywords) do Robot Framework.
+  - `resources/`: Arquivos de recursos, como variáveis e keywords, que são reutilizados nos testes.
+  - `tests/`: Casos de teste, organizados em arquivos .robot.
+  - `results/`: Resultados de execução, como logs e relatórios gerados após a execução dos testes.
+
 ## 🤖 Como Executar os Testes
 #### 🔧 Pré-requisitos (Configuração do Ambiente)
   1. Instalação do Python:
@@ -98,4 +103,4 @@ curso-robot-framework-basico-may/
 ## 🙋‍♀️ Autora
 Feito com ❤️ por Sthefany A. Ricardo.
 
-📅 Última atualização: Janeiro de 2025.
+📅 Última atualização: Fevereiro de 2025.
