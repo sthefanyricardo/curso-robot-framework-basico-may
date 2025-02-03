@@ -39,7 +39,7 @@ curso-robot-framework-basico-may/
 │   ├── resources/                # Arquivos de recursos (variáveis, keywords)
 │   ├── tests/                    # Casos de teste
 │   └── results/                  # Resultados de execução (logs, reports)
-├── requirements.txt              # Lista de todas as dependências necessárias para executar os testes
+├── requirements.txt              # Lista de dependências do projeto para instalação
 ├── .gitignore                    # Arquivos e pastas ignorados pelo Git
 └── README.md                     # Documentação do repositório
 ```
@@ -53,18 +53,18 @@ curso-robot-framework-basico-may/
 ## 🤖 Como Executar os Testes
 #### 🔧 Pré-requisitos (Configuração do Ambiente)
   1. Instalação do Python:
-    - 1.1 Certifique-se de ter o Python instalado (versão 3.7 ou superior). [Download do Python](https://www.python.org/downloads/)
+   1.1. Certifique-se de ter o Python instalado (versão 3.7 ou superior). [Download do Python](https://www.python.org/downloads/)
   2. Instalação do WebDriver:
-    2.1 Baixe o WebDriver correspondente ao seu navegador (ex: [ChromeDriver para Google Chrome](https://googlechromelabs.github.io/chrome-for-testing/) ou [EdgeDriver para o Microsoft Edge](https://developer.microsoft.com/pt-br/microsoft-edge/tools/webdriver)).
-    2.2 Certifique-se de que o caminho para as pastas e/ou arquivos do WebDriver, esteja no PATH do sistema. 
+   2.1. Baixe o WebDriver correspondente ao seu navegador (ex: [ChromeDriver para Google Chrome](https://googlechromelabs.github.io/chrome-for-testing/) ou [EdgeDriver para o Microsoft Edge](https://developer.microsoft.com/pt-br/microsoft-edge/tools/webdriver)).
+   2.2. Certifique-se de que o caminho para as pastas e/ou arquivos do WebDriver, esteja no PATH do sistema. 
   3. Instalação das dependências do projeto:
-     3.1 Abra o terminal na raiz do projeto e execute o seguinte comando:
-        ```bash
-        pip install -r requirements.txt
-        ```
-        Obs.: Isso instalará todas as dependências listadas no arquivo.
-     3.2 Verifique a instalação:
-        Após a instalação, você pode verificar se tudo está funcionando corretamente executando um dos testes do seu projeto.
+   3.1. Abra o terminal na raiz do projeto e execute o seguinte comando:
+     ```bash
+     pip install -r requirements.txt
+     ```
+     Isso instalará todas as dependências listadas no arquivo.
+   3.2. Verifique a instalação:
+   Após a instalação, você pode verificar se tudo está funcionando corretamente executando um dos testes do seu projeto.
 
 #### 📊 Executando os Testes
 1. Clone o repositório:
