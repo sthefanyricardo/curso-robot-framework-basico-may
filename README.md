@@ -41,9 +41,52 @@ curso-robot-framework-basico-may/
 │   ├── resources/                # Arquivos de recursos (variáveis, keywords)
 │   ├── tests/                    # Casos de teste
 │   └── results/                  # Resultados de execução (logs, reports)
+├── requirements.txt              # Lista de todas as dependências necessárias para executar os testes
 ├── .gitignore                    # Arquivos e pastas ignorados pelo Git
 └── README.md                     # Documentação do repositório
 ```
+## 🤖 Como Executar os Testes
+#### 🔧 Pré-requisitos (Configuração do Ambiente)
+  1. Instalação do Python:
+    1.1 Certifique-se de ter o Python instalado (versão 3.7 ou superior). [Download do Python](https://www.python.org/downloads/)
+  2. Instalação do WebDriver:
+    2.1 Baixe o WebDriver correspondente ao seu navegador (ex: [ChromeDriver para Google Chrome](https://googlechromelabs.github.io/chrome-for-testing/) ou [EdgeDriver para o Microsoft Edge](https://developer.microsoft.com/pt-br/microsoft-edge/tools/webdriver)).
+    2.2 Certifique-se de que o caminho para as pastas e/ou arquivos do WebDriver, esteja no PATH do sistema. 
+  3. Instalação das dependências do projeto:
+     3.1 Abra o terminal na raiz do projeto e execute o seguinte comando:
+        ```bash
+        pip install -r requirements.txt
+        ```
+        Obs.: Isso instalará todas as dependências listadas no arquivo.
+     3.2 Verifique a instalação:
+        Após a instalação, você pode verificar se tudo está funcionando corretamente executando um dos testes do seu projeto.
+
+#### 📊 Executando os Testes
+1. Clone o repositório:
+```bash
+   git clone https://github.com/sthefanyricardo/curso-robot-framework-basico-may.git
+```
+2. Pelo terminal ou IDE, navegue até a pasta desejada do projeto, como no exemplo abaixo:
+```bash
+   cd curso-robot-framework-basico-may/web_testing
+```
+3. Execute os testes, com os exemplos de comandos a seguir:
+- Dentro da pasta: web_testing/tests
+```bash
+   robot -d ../resultados -i CT01ORCT04 tests/
+```
+```bash
+   robot -d ../resultados amazon_testes_processuais.robot
+```
+```bash
+   robot -d ../resultados e- CT02ORCT03 tests/
+```
+- Apenas dentro da pasta: web_testing
+```bash
+   robot -d ../resultados tests/
+```
+4. Verifique os resultados:
+  Os relatórios e logs serão gerados na pasta ```resultados```.
 
 ## 📌 Agradecimentos
 - À instrutora May Fernandes pelo curso incrível e pelo compartilhamento de conhecimento.
