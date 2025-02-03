@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2 (Python 3.12.0 on win32)" generated="2025-02-03T12:50:14.361005" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="C:\workspace\curso-robot-framework-basico-may\trabalhando_variaveis_escopos_argumentos\tests">
+<suite id="s1-s1" name="Exemplos Argumentos" source="C:\workspace\curso-robot-framework-basico-may\trabalhando_variaveis_escopos_argumentos\tests\exemplos_argumentos.robot">
+<test id="s1-s1-t1" name="Caso de teste de exemplo 01" line="8">
+<kw name="Uma keyword qualquer 01">
+<kw name="Uma subkeyword com argumentos">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-03T12:50:14.471360" level="INFO">Nome Usuário: Bruno Silva</msg>
+<arg>Nome Usuário: ${NOME_USUARIO}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-03T12:50:14.471360" elapsed="0.001000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-03T12:50:14.473360" level="INFO">Email: bruno_silva@teste.com.br</msg>
+<arg>Email: ${EMAIL_USUARIO}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-03T12:50:14.472360" elapsed="0.001000"/>
+</kw>
+<arg>Bruno Silva</arg>
+<arg>bruno_silva@teste.com.br</arg>
+<status status="PASS" start="2025-02-03T12:50:14.469360" elapsed="0.004000"/>
+</kw>
+<kw name="Uma subkeyword com argumentos">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-03T12:50:14.478365" level="INFO">Nome Usuário: May Fernandes</msg>
+<arg>Nome Usuário: ${NOME_USUARIO}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-03T12:50:14.477364" elapsed="0.001001"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-03T12:50:14.479360" level="INFO">Email: mayfernandes@exemplo.com.br</msg>
+<arg>Email: ${EMAIL_USUARIO}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-03T12:50:14.478365" elapsed="0.000995"/>
+</kw>
+<arg>${PESSOA.nome}</arg>
+<arg>${PESSOA.email}</arg>
+<status status="PASS" start="2025-02-03T12:50:14.473360" elapsed="0.007000"/>
+</kw>
+<kw name="Uma subkeyword com retorno">
+<kw name="Set Variable If" owner="BuiltIn">
+<msg time="2025-02-03T12:50:14.484360" level="INFO">${MENSAGEM} = OK!Usuário é maior de idade!</msg>
+<var>${MENSAGEM}</var>
+<arg>${IDADE_USUARIO}&lt;18</arg>
+<arg>Não autorizado! O usuário ${NOME_USUARIO} é menor de idade!</arg>
+<arg>OK!Usuário é maior de idade!</arg>
+<doc>Sets variable based on the given condition.</doc>
+<status status="PASS" start="2025-02-03T12:50:14.484360" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${MENSAGEM}</value>
+<status status="PASS" start="2025-02-03T12:50:14.485360" elapsed="0.000000"/>
+</return>
+<msg time="2025-02-03T12:50:14.485360" level="INFO">${MENSAGEM_ALERTA} = OK!Usuário é maior de idade!</msg>
+<var>${MENSAGEM_ALERTA}</var>
+<arg>${PESSOA.nome}</arg>
+<arg>${PESSOA.idade}</arg>
+<status status="PASS" start="2025-02-03T12:50:14.480360" elapsed="0.005000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-03T12:50:14.486359" level="INFO">OK!Usuário é maior de idade!</msg>
+<arg>${MENSAGEM_ALERTA}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-03T12:50:14.486359" elapsed="0.001004"/>
+</kw>
+<status status="PASS" start="2025-02-03T12:50:14.468361" elapsed="0.026012"/>
+</kw>
+<status status="PASS" start="2025-02-03T12:50:14.465360" elapsed="0.030001"/>
+</test>
+<doc>Exemplo de uso de variáveis como argumentos em Keywords</doc>
+<status status="PASS" start="2025-02-03T12:50:14.458364" elapsed="0.038996"/>
+</suite>
+<suite id="s1-s2" name="Exemplos Escopos Variaveis" source="C:\workspace\curso-robot-framework-basico-may\trabalhando_variaveis_escopos_argumentos\tests\exemplos_escopos_variaveis.robot">
+<test id="s1-s2-t1" name="Caso de teste de exemplo 01" line="9">
+<kw name="Uma keyword qualquer 01">
+<kw name="Generate Random String" owner="String">
+<msg time="2025-02-03T12:50:14.563357" level="INFO">${GLOBAL_CRIADA_EM_TEMPO_EXECUCAO} = EDeyWNtK</msg>
+<var>${GLOBAL_CRIADA_EM_TEMPO_EXECUCAO}</var>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2025-02-03T12:50:14.562356" elapsed="0.001001"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2025-02-03T12:50:14.564356" level="INFO">${GLOBAL_CRIADA_EM_TEMPO_EXECUCAO} = EDeyWNtK</msg>
+<arg>${GLOBAL_CRIADA_EM_TEMPO_EXECUCAO}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2025-02-03T12:50:14.563357" elapsed="0.001999"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2025-02-03T12:50:14.568357" level="INFO">${SUITE_CRIADA_EM_TEMPO_EXECUCAO} = Variável da suíte</msg>
+<arg>${SUITE_CRIADA_EM_TEMPO_EXECUCAO}</arg>
+<arg>Variável da suíte</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2025-02-03T12:50:14.565356" elapsed="0.003001"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2025-02-03T12:50:14.573358" level="INFO">${TESTE_01} = Variável do teste 01</msg>
+<arg>${TESTE_01}</arg>
+<arg>Variável do teste 01</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2025-02-03T12:50:14.568357" elapsed="0.005001"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-03T12:50:14.575358" level="INFO">Variável do teste 01</msg>
+<arg>${TESTE_01}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-03T12:50:14.575358" elapsed="0.000998"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-02-03T12:50:14.576356" level="INFO">${LOCAL} = Variável local da keyword 01</msg>
+<var>${LOCAL}</var>
+<arg>Variável local da keyword 01</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-02-03T12:50:14.576356" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-03T12:50:14.577354" level="INFO">Variável local da keyword 01</msg>
+<arg>${LOCAL}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-03T12:50:14.577354" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-02-03T12:50:14.561357" elapsed="0.016999"/>
+</kw>
+<kw name="Uma keyword qualquer 02">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-02-03T12:50:14.580355" level="INFO">${LOCAL} = Variável local da keyword 02</msg>
+<var>${LOCAL}</var>
+<arg>Variável local da keyword 02</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-02-03T12:50:14.579358" elapsed="0.000997"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-03T12:50:14.581354" level="INFO">Variável local da keyword 02</msg>
+<arg>${LOCAL}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-03T12:50:14.580355" elapsed="0.000999"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-03T12:50:14.582354" level="INFO">Minha variável GLOBAL_INSTANCIADA foi instanciada para a suíte / EDeyWNtK / Variável da suíte / Variável local da keyword 02</msg>
+<arg>${GLOBAL_INSTANCIADA} / ${GLOBAL_CRIADA_EM_TEMPO_EXECUCAO} / ${SUITE_CRIADA_EM_TEMPO_EXECUCAO} / ${LOCAL}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-03T12:50:14.581354" elapsed="0.001000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-03T12:50:14.583354" level="INFO">Variável do teste 01</msg>
+<arg>${TESTE_01}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-03T12:50:14.582354" elapsed="0.001000"/>
+</kw>
+<status status="PASS" start="2025-02-03T12:50:14.579358" elapsed="0.003996"/>
+</kw>
+<status status="PASS" start="2025-02-03T12:50:14.550361" elapsed="0.033996"/>
+</test>
+<test id="s1-s2-t2" name="Caso de teste de exemplo 02" line="13">
+<kw name="Uma keyword qualquer 02">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-02-03T12:50:14.593361" level="INFO">${LOCAL} = Variável local da keyword 02</msg>
+<var>${LOCAL}</var>
+<arg>Variável local da keyword 02</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-02-03T12:50:14.593361" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-03T12:50:14.594354" level="INFO">Variável local da keyword 02</msg>
+<arg>${LOCAL}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-03T12:50:14.594354" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-03T12:50:14.596352" level="INFO">Minha variável GLOBAL_INSTANCIADA foi instanciada para a suíte / EDeyWNtK / Variável da suíte / Variável local da keyword 02</msg>
+<arg>${GLOBAL_INSTANCIADA} / ${GLOBAL_CRIADA_EM_TEMPO_EXECUCAO} / ${SUITE_CRIADA_EM_TEMPO_EXECUCAO} / ${LOCAL}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-03T12:50:14.595354" elapsed="0.000998"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-03T12:50:14.599353" level="FAIL">Variable '${TESTE_01}' not found.</msg>
+<arg>${TESTE_01}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="FAIL" start="2025-02-03T12:50:14.596352" elapsed="0.003001">Variable '${TESTE_01}' not found.</status>
+</kw>
+<status status="FAIL" start="2025-02-03T12:50:14.592357" elapsed="0.006996">Variable '${TESTE_01}' not found.</status>
+</kw>
+<kw name="Uma keyword qualquer 03">
+<status status="NOT RUN" start="2025-02-03T12:50:14.600353" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-02-03T12:50:14.586354" elapsed="0.014998">Variable '${TESTE_01}' not found.</status>
+</test>
+<test id="s1-s2-t3" name="Caso de teste de exemplo 03" line="17">
+<kw name="Uma keyword qualquer 04">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-02-03T12:50:14.609357" level="INFO">${LOCAL} = Variável local da keyword 04</msg>
+<var>${LOCAL}</var>
+<arg>Variável local da keyword 04</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-02-03T12:50:14.609357" elapsed="0.000999"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-03T12:50:14.610356" level="INFO">Variável local da keyword 04</msg>
+<arg>${LOCAL}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-03T12:50:14.610356" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-03T12:50:14.612355" level="INFO">Minha variável GLOBAL_INSTANCIADA foi instanciada para a suíte / EDeyWNtK / Variável da suíte / Variável local da keyword 04</msg>
+<arg>${GLOBAL_INSTANCIADA} / ${GLOBAL_CRIADA_EM_TEMPO_EXECUCAO} / ${SUITE_CRIADA_EM_TEMPO_EXECUCAO} / ${LOCAL}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-03T12:50:14.611356" elapsed="0.000999"/>
+</kw>
+<status status="PASS" start="2025-02-03T12:50:14.608356" elapsed="0.003999"/>
+</kw>
+<status status="PASS" start="2025-02-03T12:50:14.606355" elapsed="0.007000"/>
+</test>
+<doc>Exemplo de escopo de variáveis: GLOBAIS, SUITE, TESTE (test case) e LOCAL (keyword)</doc>
+<status status="FAIL" start="2025-02-03T12:50:14.500359" elapsed="0.115995"/>
+</suite>
+<suite id="s1-s3" name="Exemplos Tipos Variaveis" source="C:\workspace\curso-robot-framework-basico-may\trabalhando_variaveis_escopos_argumentos\tests\exemplos_tipos_variaveis.robot">
+<test id="s1-s3-t1" name="Caso de teste de exemplo 01" line="15">
+<kw name="Uma keyword qualquer 01">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-03T12:50:14.635353" level="INFO">Vamos ver os tipos de variáveis no robot!</msg>
+<arg>${SIMPLES}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-03T12:50:14.634351" elapsed="0.001002"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-03T12:50:14.639357" level="INFO">Essa tem que ser maça: maça e essa tem que ser morango: morango</msg>
+<arg>Essa tem que ser maça: ${FRUTAS[2]} e essa tem que ser morango: ${FRUTAS[0]}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-03T12:50:14.635353" elapsed="0.005003"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-03T12:50:14.644354" level="INFO">Nome: May Fernandes e email: mayfernandes@exemplo.com.br</msg>
+<arg>Nome: ${PESSOA.nome} e email: ${PESSOA.email}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-03T12:50:14.641356" elapsed="0.003997"/>
+</kw>
+<status status="PASS" start="2025-02-03T12:50:14.633352" elapsed="0.012001"/>
+</kw>
+<status status="PASS" start="2025-02-03T12:50:14.631350" elapsed="0.015003"/>
+</test>
+<doc>Exemplo de tipos de variáveis: SIMPLES, LISTAS e DICIONÁRIOS</doc>
+<status status="PASS" start="2025-02-03T12:50:14.620353" elapsed="0.027999"/>
+</suite>
+<suite id="s1-s4" name="Tarefa Keywords Argumentos" source="C:\workspace\curso-robot-framework-basico-may\trabalhando_variaveis_escopos_argumentos\tests\tarefa_keywords_argumentos.robot">
+<test id="s1-s4-t1" name="Tarefa 03 - Uso de argumentos em Keywords" line="9">
+<kw name="Criar email customizado">
+<kw name="Generate Random String" owner="String">
+<msg time="2025-02-03T12:50:14.674354" level="INFO">${PALAVRA_ALEATORIA} = sxK0s</msg>
+<var>${PALAVRA_ALEATORIA}</var>
+<arg>5</arg>
+<arg>[LETTERS][NUMBERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2025-02-03T12:50:14.672352" elapsed="0.003002"/>
+</kw>
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2025-02-03T12:50:14.677353" level="INFO">${EMAIL_PESSOA} = SthefanyRicardosxK0s@testerobot.com</msg>
+<var>${EMAIL_PESSOA}</var>
+<arg>${NOME_PESSOA}${SOBRENOME_PESSOA}${PALAVRA_ALEATORIA}@testerobot.com</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2025-02-03T12:50:14.675354" elapsed="0.001999"/>
+</kw>
+<return>
+<value>${EMAIL_PESSOA}</value>
+<status status="PASS" start="2025-02-03T12:50:14.677353" elapsed="0.000000"/>
+</return>
+<msg time="2025-02-03T12:50:14.678348" level="INFO">${EMAIL_PERSONALIZADO} = SthefanyRicardosxK0s@testerobot.com</msg>
+<var>${EMAIL_PERSONALIZADO}</var>
+<arg>${DADOS_PESSOA.nome}</arg>
+<arg>${DADOS_PESSOA.sobrenome}</arg>
+<doc>Keyword responsável por criar um email customizado com base nos dados de uma pessoa.</doc>
+<status status="PASS" start="2025-02-03T12:50:14.668350" elapsed="0.009998"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>\n\n${EMAIL_PERSONALIZADO}\n</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-02-03T12:50:14.679347" elapsed="0.002003"/>
+</kw>
+<doc>Teste que verifica a criação de um email customizado com base nos dados de uma pessoa e imprime o email criado no console.</doc>
+<tag>argumentos_keywords</tag>
+<tag>task03</tag>
+<status status="PASS" start="2025-02-03T12:50:14.665351" elapsed="0.015999"/>
+</test>
+<doc>Exemplo de uso de variáveis como argumentos (parâmetros de entrada) em Keywords</doc>
+<status status="PASS" start="2025-02-03T12:50:14.652351" elapsed="0.031997"/>
+</suite>
+<suite id="s1-s5" name="Tarefa Variaveis Dicionarios" source="C:\workspace\curso-robot-framework-basico-may\trabalhando_variaveis_escopos_argumentos\tests\tarefa_variaveis_dicionarios.robot">
+<test id="s1-s5-t1" name="Tarefa 03 - Listar os meses do ano" line="8">
+<kw name="Imprimir meses do ano e a quantidade de dias no console">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>\n</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-02-03T12:50:14.707349" elapsed="0.001997"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Mês: ${CHAVE} - Quantidade de dias: ${VALUE}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-02-03T12:50:14.711349" elapsed="0.001000"/>
+</kw>
+<var name="${CHAVE}">Janeiro</var>
+<var name="${VALUE}">31</var>
+<status status="PASS" start="2025-02-03T12:50:14.711349" elapsed="0.001998"/>
+</iter>
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Mês: ${CHAVE} - Quantidade de dias: ${VALUE}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-02-03T12:50:14.714348" elapsed="0.001998"/>
+</kw>
+<var name="${CHAVE}">Fevereiro</var>
+<var name="${VALUE}">28</var>
+<status status="PASS" start="2025-02-03T12:50:14.714348" elapsed="0.001998"/>
+</iter>
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Mês: ${CHAVE} - Quantidade de dias: ${VALUE}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-02-03T12:50:14.719350" elapsed="0.002998"/>
+</kw>
+<var name="${CHAVE}">Março</var>
+<var name="${VALUE}">31</var>
+<status status="PASS" start="2025-02-03T12:50:14.718348" elapsed="0.004000"/>
+</iter>
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Mês: ${CHAVE} - Quantidade de dias: ${VALUE}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-02-03T12:50:14.723352" elapsed="0.003995"/>
+</kw>
+<var name="${CHAVE}">Abril</var>
+<var name="${VALUE}">30</var>
+<status status="PASS" start="2025-02-03T12:50:14.723352" elapsed="0.003995"/>
+</iter>
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Mês: ${CHAVE} - Quantidade de dias: ${VALUE}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-02-03T12:50:14.729349" elapsed="0.000998"/>
+</kw>
+<var name="${CHAVE}">Maio</var>
+<var name="${VALUE}">31</var>
+<status status="PASS" start="2025-02-03T12:50:14.728346" elapsed="0.002001"/>
+</iter>
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Mês: ${CHAVE} - Quantidade de dias: ${VALUE}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-02-03T12:50:14.731347" elapsed="0.000997"/>
+</kw>
+<var name="${CHAVE}">Junho</var>
+<var name="${VALUE}">30</var>
+<status status="PASS" start="2025-02-03T12:50:14.731347" elapsed="0.000997"/>
+</iter>
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Mês: ${CHAVE} - Quantidade de dias: ${VALUE}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-02-03T12:50:14.733344" elapsed="0.001000"/>
+</kw>
+<var name="${CHAVE}">Julho</var>
+<var name="${VALUE}">31</var>
+<status status="PASS" start="2025-02-03T12:50:14.733344" elapsed="0.002004"/>
+</iter>
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Mês: ${CHAVE} - Quantidade de dias: ${VALUE}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-02-03T12:50:14.736346" elapsed="0.003002"/>
+</kw>
+<var name="${CHAVE}">Agosto</var>
+<var name="${VALUE}">31</var>
+<status status="PASS" start="2025-02-03T12:50:14.736346" elapsed="0.003002"/>
+</iter>
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Mês: ${CHAVE} - Quantidade de dias: ${VALUE}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-02-03T12:50:14.741350" elapsed="0.001996"/>
+</kw>
+<var name="${CHAVE}">Setembro</var>
+<var name="${VALUE}">30</var>
+<status status="PASS" start="2025-02-03T12:50:14.740353" elapsed="0.002993"/>
+</iter>
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Mês: ${CHAVE} - Quantidade de dias: ${VALUE}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-02-03T12:50:14.745346" elapsed="0.000999"/>
+</kw>
+<var name="${CHAVE}">Outubro</var>
+<var name="${VALUE}">31</var>
+<status status="PASS" start="2025-02-03T12:50:14.745346" elapsed="0.001998"/>
+</iter>
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Mês: ${CHAVE} - Quantidade de dias: ${VALUE}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-02-03T12:50:14.747344" elapsed="0.000999"/>
+</kw>
+<var name="${CHAVE}">Novembro</var>
+<var name="${VALUE}">30</var>
+<status status="PASS" start="2025-02-03T12:50:14.747344" elapsed="0.001999"/>
+</iter>
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Mês: ${CHAVE} - Quantidade de dias: ${VALUE}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-02-03T12:50:14.749343" elapsed="0.001000"/>
+</kw>
+<var name="${CHAVE}">Dezembro</var>
+<var name="${VALUE}">31</var>
+<status status="PASS" start="2025-02-03T12:50:14.749343" elapsed="0.002000"/>
+</iter>
+<var>${CHAVE}</var>
+<var>${VALUE}</var>
+<value>&amp;{MESES_DIAS_2025}</value>
+<status status="PASS" start="2025-02-03T12:50:14.710348" elapsed="0.040995"/>
+</for>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>\n</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-02-03T12:50:14.752347" elapsed="0.003004"/>
+</kw>
+<doc>Keyword responsável por imprimir cada mês do ano e a sua respectiva quantidade de dias no console.</doc>
+<status status="PASS" start="2025-02-03T12:50:14.706352" elapsed="0.048999"/>
+</kw>
+<doc>Teste que verifica a impressão dos meses do ano e a quantidade de dias no console.</doc>
+<tag>task03 listar_dias_e_meses</tag>
+<status status="PASS" start="2025-02-03T12:50:14.702346" elapsed="0.054001"/>
+</test>
+<doc>Exemplos de manipulação de variáveis do tipo Dicionário.</doc>
+<status status="PASS" start="2025-02-03T12:50:14.693355" elapsed="0.067991"/>
+</suite>
+<suite id="s1-s6" name="Tarefa Variaveis Listas" source="C:\workspace\curso-robot-framework-basico-may\trabalhando_variaveis_escopos_argumentos\tests\tarefa_variaveis_listas.robot">
+<test id="s1-s6-t1" name="Tarefa 01 - Listar os meses do ano" line="9">
+<kw name="Imprimir meses do ano no console">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>\nPrimeiro mês do ano: ${MESES_ANO[0]}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-02-03T12:50:14.780341" elapsed="0.001999"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Segundo mês do ano: ${MESES_ANO[1]}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-02-03T12:50:14.783341" elapsed="0.003000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Terceiro mês do ano: ${MESES_ANO[2]}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-02-03T12:50:14.787343" elapsed="0.006999"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Quarto mês do ano: ${MESES_ANO[3]}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-02-03T12:50:14.794342" elapsed="0.002998"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Quinto mês do ano: ${MESES_ANO[4]}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-02-03T12:50:14.797340" elapsed="0.003000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Sexto mês do ano: ${MESES_ANO[5]}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-02-03T12:50:14.800340" elapsed="0.003003"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Sétimo mês do ano: ${MESES_ANO[6]}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-02-03T12:50:14.804346" elapsed="0.006000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Oitavo mês do ano: ${MESES_ANO[7]}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-02-03T12:50:14.810346" elapsed="0.002996"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Nono mês do ano: ${MESES_ANO[8]}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-02-03T12:50:14.813342" elapsed="0.001997"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Décimo mês do ano: ${MESES_ANO[9]}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-02-03T12:50:14.816340" elapsed="0.002002"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Décimo primeiro mês do ano: ${MESES_ANO[10]}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-02-03T12:50:14.819340" elapsed="0.006006"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Décimo segundo mês do ano: ${MESES_ANO[11]}\n</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-02-03T12:50:14.828343" elapsed="0.002000"/>
+</kw>
+<doc>Keyword responsável por imprimir cada mês do ano no console.</doc>
+<status status="PASS" start="2025-02-03T12:50:14.779342" elapsed="0.051997"/>
+</kw>
+<doc>Teste que verifica a impressão dos meses do ano no console.</doc>
+<tag>listar_meses</tag>
+<tag>task01</tag>
+<status status="PASS" start="2025-02-03T12:50:14.777347" elapsed="0.054993"/>
+</test>
+<doc>Exemplos de manipulação de variáveis do tipo Lista.</doc>
+<status status="PASS" start="2025-02-03T12:50:14.765344" elapsed="0.068998"/>
+</suite>
+<status status="FAIL" start="2025-02-03T12:50:14.367005" elapsed="0.476342"/>
+</suite>
+<statistics>
+<total>
+<stat pass="7" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">argumentos_keywords</stat>
+<stat pass="1" fail="0" skip="0">listar_meses</stat>
+<stat pass="1" fail="0" skip="0">task01</stat>
+<stat pass="1" fail="0" skip="0">task03</stat>
+<stat pass="1" fail="0" skip="0">task03 listar_dias_e_meses</stat>
+</tag>
+<suite>
+<stat name="Tests" id="s1" pass="7" fail="1" skip="0">Tests</stat>
+<stat name="Exemplos Argumentos" id="s1-s1" pass="1" fail="0" skip="0">Tests.Exemplos Argumentos</stat>
+<stat name="Exemplos Escopos Variaveis" id="s1-s2" pass="2" fail="1" skip="0">Tests.Exemplos Escopos Variaveis</stat>
+<stat name="Exemplos Tipos Variaveis" id="s1-s3" pass="1" fail="0" skip="0">Tests.Exemplos Tipos Variaveis</stat>
+<stat name="Tarefa Keywords Argumentos" id="s1-s4" pass="1" fail="0" skip="0">Tests.Tarefa Keywords Argumentos</stat>
+<stat name="Tarefa Variaveis Dicionarios" id="s1-s5" pass="1" fail="0" skip="0">Tests.Tarefa Variaveis Dicionarios</stat>
+<stat name="Tarefa Variaveis Listas" id="s1-s6" pass="1" fail="0" skip="0">Tests.Tarefa Variaveis Listas</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
