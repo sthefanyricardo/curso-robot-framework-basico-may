@@ -35,20 +35,34 @@ O repositório está organizado da seguinte forma:
 
 ```
 curso-robot-framework-basico-may/
-├── web_testing/                  # Exemplos e exercícios de automação web
-│   ├── resources/                # Arquivos de recursos (variáveis, keywords)
-│   ├── tests/                    # Casos de teste
-│   └── results/                  # Resultados de execução (logs, reports)
-├── requirements.txt              # Lista de dependências do projeto para instalação
-├── .gitignore                    # Arquivos e pastas ignorados pelo Git
-└── README.md                     # Documentação do repositório
+├── testes_API/                                               # Testes automatizados para APIs REST
+│   ├── resources/                                            # Arquivos de recursos (variáveis, keywords)
+│   ├── tests/                                                # Casos de teste de API
+│   ├── resultados/                                           # Resultados de execução (logs, reports)
+│
+├── testes_web/                                               # Testes automatizados para aplicações web
+│   ├── resources/                                            # Arquivos de recursos (variáveis, keywords)
+│   ├── tests/                                                # Casos de teste de Aplicações Web
+│   └── resultados/                                           # Resultados de execução (logs, reports)
+│
+├── trabalhando_estruturas/                                   # Exemplos e exercícios lógicos
+│   ├── tests/                                                # Exemplos e exercícios lógicos
+│   └── resultados/                                           # Resultados de execução (logs, reports)
+│
+├── trabalhando_variaveis_escopos_argumentos                  # Exemplos e exercícios lógicos
+│   ├── tests/                                                # Exemplos e exercícios lógicos
+│   └── resultados/                                           # Resultados de execução (logs, reports)
+│
+├── requirements.txt                                          # Lista de dependências do projeto para instalação
+├── .gitignore                                                # Arquivos e pastas ignorados pelo Git
+└── README.md                                                 # Documentação do repositório
 ```
 
 #### Descrição das Pastas
-- `web_testing/`: Contém os scripts de teste e exemplos relacionados aos testes de interface web. Os arquivos .robot são os scripts de teste escritos na linguagem de palavras-chave (keywords) do Robot Framework.
+- `testes_web/`: Contém os scripts de teste e exemplos relacionados aos testes de interface web. Os arquivos .robot são os scripts de teste escritos na linguagem de palavras-chave (keywords) do Robot Framework.
   - `resources/`: Arquivos de recursos, como variáveis e keywords, que são reutilizados nos testes.
   - `tests/`: Casos de teste, organizados em arquivos .robot.
-  - `results/`: Resultados de execução, como logs e relatórios gerados após a execução dos testes.
+  - `resultados/`: Resultados de execução, como logs e relatórios gerados após a execução dos testes.
 
 ## 🤖 Como Executar os Testes
 #### 🔧 Pré-requisitos (Configuração do Ambiente)
@@ -104,3 +118,5 @@ curso-robot-framework-basico-may/
 Feito com ❤️ por Sthefany A. Ricardo.
 
 📅 Última atualização: Fevereiro de 2025.
+
+![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)
