@@ -108,5 +108,3 @@ O objetivo do curso é introduzir os participantes ao mundo da automação de te
 Feito com ❤️ por Sthefany A. Ricardo.
 
 📅 Última atualização: Fevereiro de 2025.
-
-![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)
