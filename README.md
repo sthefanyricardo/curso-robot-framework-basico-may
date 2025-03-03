@@ -57,7 +57,7 @@ O objetivo do curso é introduzir os participantes ao mundo da automação de te
 ---
 
 ## 🤖 Como Executar os Testes
-#### 🔧 Pré-requisitos (Configuração do Ambiente)
+### 🔧 Pré-requisitos (Configuração do Ambiente)
   1. **Instalação do Python:**
      - Certifique-se de ter o Python instalado (versão 3.7 ou superior). [Download do Python](https://www.python.org/downloads/)
   2. **Instalação do WebDriver:**
@@ -72,7 +72,7 @@ O objetivo do curso é introduzir os participantes ao mundo da automação de te
      - **Verifique a instalação:**
        Após a instalação, você pode verificar se tudo está funcionando corretamente executando um dos testes do seu projeto.
 
-#### 📊 Executando os Testes
+### 📊 Executando os Testes
 1. Clone o repositório:
 ```bash
    git clone https://github.com/sthefanyricardo/curso-robot-framework-basico-may.git
