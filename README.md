@@ -54,6 +54,8 @@ O objetivo do curso é introduzir os participantes ao mundo da automação de te
   - **`.gitignore`** → Lista de arquivos e diretórios que devem ser ignorados pelo Git.  
   - **`README.md`** → Documentação do projeto, incluindo instruções de instalação e execução dos testes.  
 
+---
+
 ## 🤖 Como Executar os Testes
 #### 🔧 Pré-requisitos (Configuração do Ambiente)
   1. **Instalação do Python:**
@@ -96,6 +98,8 @@ O objetivo do curso é introduzir os participantes ao mundo da automação de te
 ```
 4. Verifique os resultados:
   Os relatórios e logs serão gerados na pasta ```resultados```.
+
+---
 
 ## 📌 Agradecimentos
 - À instrutora May Fernandes pelo curso incrível e pelo compartilhamento de conhecimento.
