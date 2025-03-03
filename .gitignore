@@ -3,6 +3,7 @@ exemplos-casos-de-testes
 HTML_Locators
 results
 infos
+arquivos_cursos
 
 # Ignorar arquivos específicos
 *.log
