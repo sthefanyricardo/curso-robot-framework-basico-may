@@ -24,6 +24,11 @@ on:
           - "api"
           - "estruturas"
           - "variaveis_escopos_argumentos"
+      skip_test:
+        type: string
+        description: Qual a TAG do teste que você deseja pular? (opcional)
+        required: false
+        default: "CT02"
 
 jobs:
   testing:
@@ -51,9 +56,9 @@ jobs:
           elif [ "${{ inputs.test_type }}" == "API" ]; then
             robot -d ./resultados-testes-CI testes_API/tests
           elif [ "${{ inputs.test_type }}" == "estruturas" ]; then
-            robot -d ./resultados-testes-CI -v HEADLESS:true -v BROWSER:chrome trabalhando_estruturas/tests
+            robot -d ./resultados-testes-CI -v HEADLESS:true -v BROWSER:${{ inputs.browser }} trabalhando_estruturas/tests
           elif [ "${{ inputs.test_type }}" == "escopos" ]; then
-            robot -d ./resultados-testes-CI -e CT02 trabalhando_variaveis_escopos_argumentos/tests
+            robot -d ./resultados-testes-CI -e ${{ inputs.skip_test }} trabalhando_variaveis_escopos_argumentos/tests
           fi
       
       - name: Run RF WEB Tests
