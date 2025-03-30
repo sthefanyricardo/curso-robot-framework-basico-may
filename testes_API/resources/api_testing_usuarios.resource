@@ -37,7 +37,7 @@ Cadastrar o usuário criado na ServeRest
 
 Criar Sessão na ServeRest
   ${headers}  Create Dictionary  accept=application/json  Content-Type=application/json
-  Create Session  alias=ServeRest  url=https://serverest.dev  headers=${headers}
+  Create Session  alias=ServeRest  url=https://serverest.dev  verify=True  headers=${headers}
 
 Conferir se o usuário foi cadastrado corretamente
   Log  ${RESPOSTA}

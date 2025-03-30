@@ -6,9 +6,11 @@ Documentation  Suíte de exmeplo didático para exemplificar o uso de LOGs nos t
 Library  SeleniumLibrary
 
 *** Variables ***
+${BROWSER}  chrome
+${HEADLESS}  ${False}
 @{FRUTAS}  maça  banana  uva  abacaxi
 
-*** Test Case ***
+*** Test Cases ***
 Caso de teste exemplo 01
   Usando LOG para mensagens
   Usando LOG Console
@@ -27,6 +29,11 @@ Usando LOG Console
 
 Usando screen shots
   Log  Nos testes web, podemos logar Screenshot com a SeleniumLibrary
-  Open Browser  http://www.robotizandotestes.blogspot.com.br  chrome
+  IF  '${HEADLESS}' == 'True' or '${HEADLESS}' == 'true'
+    Open Browser  http://www.robotizandotestes.blogspot.com.br  browser=${BROWSER}  options=add_argument("--headless=new")
+  ELSE
+    Open Browser  http://www.robotizandotestes.blogspot.com.br  browser=${BROWSER}
+  END
+  Maximize Browser Window
   Capture Page Screenshot  nome_do_meuscreenshot.png
   Close Browser
