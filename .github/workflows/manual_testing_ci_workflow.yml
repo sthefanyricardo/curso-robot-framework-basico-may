@@ -5,8 +5,9 @@ on:
     inputs:
       tag:
         type: string
-        description: Qual é a TAG a ser executada?
+        description: Qual é a TAG do teste que você deseja executar?
         required: true
+        default: "CT01ORCT02"
       browser:
         type: choice
         description: Qual BROWSER executar?
@@ -26,7 +27,7 @@ on:
           - "variaveis_escopos_argumentos"
       skip_test:
         type: string
-        description: Qual a TAG do teste que você deseja pular? (opcional)
+        description: Qual é a TAG do teste que você deseja pular? (opcional)
         required: false
         default: "CT02"
 
