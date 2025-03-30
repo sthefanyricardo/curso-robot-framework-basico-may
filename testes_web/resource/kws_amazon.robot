@@ -22,10 +22,10 @@ ${BTN_GARANTIA_ESTENDIDA_PRODUTO}  //input[@class='a-button-input' and @type='su
 ###  KEYWORDS SETUP E TEARDOWN ###
 Abrir o navegador
   [Documentation]  keyword responsável por abrir o navegador escolhido
-  IF  ${HEADLESS} == True or ${HEADLESS} == true
-    Open Browser  browser=${BROWSER}  options=options.add_argument("--headless=new")
+  IF  '${HEADLESS}' == 'True' or '${HEADLESS}' == 'true'
+    Open Browser  browser=${BROWSER}  options=add_experimental_option("detach", True); add_argument("--headless=new")
   ELSE
-    Open Browser  browser=${BROWSER}  options=add_experimental_option("detach", True) 
+    Open Browser  browser=${BROWSER}  options=add_experimental_option("detach", True)
   END
   Maximize Browser Window
 
