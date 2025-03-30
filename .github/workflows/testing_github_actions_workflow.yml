@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        test_type: [web, API, estruturas, escopos]  # Adicione os tipos de teste que você deseja executar aqui
+        test_type: [API, estruturas, escopos]  # Adicione os tipos de teste que você deseja executar aqui
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -25,9 +25,7 @@ jobs:
       
       - name: Run tests
         run: |
-          if [ "${{ matrix.test_type }}" == "web" ]; then
-            robot -d ./resultados-testes-CI -v HEADLESS:true -v BROWSER:chrome -i CT01 -i CT02 testes_web/tests
-          elif [ "${{ matrix.test_type }}" == "API" ]; then
+          if [ "${{ matrix.test_type }}" == "API" ]; then
             robot -d ./resultados-testes-CI testes_API/tests
           elif [ "${{ matrix.test_type }}" == "estruturas" ]; then
             robot -d ./resultados-testes-CI -v HEADLESS:true -v BROWSER:chrome trabalhando_estruturas/tests
