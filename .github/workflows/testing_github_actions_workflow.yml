@@ -7,8 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        test_type: [web, api]  # Matriz para rodar os testes web e api
-
+        test_type: [web, api, estruturas, variaveis_escopos_argumentos]  # Adicione os tipos de teste que você deseja executar aqui
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -30,6 +29,10 @@ jobs:
             robot -d ./testes_web/resultados-testes-CI -v HEADLESS:true -v BROWSER:chrome -i CT01 -i CT02 testes_web/tests
           elif [ "${{ matrix.test_type }}" == "api" ]; then
             robot -d ./testes_API/resultados-testes-CI testes_API/tests
+          elif [ "${{ matrix.test_type }}" == "estruturas" ]; then
+            robot -d ./trabalhando_estruturas/resultados-testes-CI trabalhando_estruturas/tests
+          elif [ "${{ matrix.test_type }}" == "variaveis_escopos_argumentos" ]; then
+            robot -d ./trabalhando_variaveis_escopos_argumentos/resultados-testes-CI trabalhando_variaveis_escopos_argumentos/tests
           fi
 
       - name: Upload test results
@@ -37,7 +40,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: ${{ matrix.test_type }}-results
-          path: ./testes_${{ matrix.test_type == 'api' && 'API' || 'web' }}/resultados-testes-CI
+          path: ${{ matrix.test_type == 'api' && './testes_API/resultados-testes-CI' || './testes_${{ matrix.test_type }}/resultados-testes-CI' }}
           if-no-files-found: ignore
           retention-days: 2
   
