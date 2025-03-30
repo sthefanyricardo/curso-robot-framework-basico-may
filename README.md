@@ -111,4 +111,4 @@ O objetivo do curso é introduzir os participantes ao mundo da automação de te
 ## 🙋‍♀️ Autora
 Feito com ❤️ por Sthefany A. Ricardo.
 
-📅 Última atualização: Fevereiro de 2025.
+📅 Última atualização: Março de 2025.
