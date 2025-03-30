@@ -29,8 +29,7 @@ jobs:
           if [ "${{ matrix.test_type }}" == "web" ]; then
             robot -d ./testes_web/resultados-testes-CI -v HEADLESS:true -v BROWSER:chrome testes_web/tests
           elif [ "${{ matrix.test_type }}" == "api" ]; then
-            robot -d ./testes_api/resultados-testes-CI -v MY_GITHUB_USER:${{ secrets.MY_GITHUB_USER }} \
-            -v MY_GITHUB_TOKEN:${{ secrets.MY_GITHUB_TOKEN }} -i HeadersParamsAuth -i ExerciciosAPI testes_api/tests
+            robot -d ./testes_API/resultados-testes-CI testes_API/tests
           fi
 
       - name: Upload test results
