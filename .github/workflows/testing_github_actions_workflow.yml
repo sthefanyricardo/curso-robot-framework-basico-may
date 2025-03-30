@@ -1,7 +1,7 @@
 name: CI - Execução de Testes Automatizados
 run-name: Testes de CI com Robot Framework
 on: [push]
-   
+
 jobs:
   testing:
     runs-on: ubuntu-latest
@@ -39,7 +39,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ matrix.test_type }}-results
+          name: ${{ matrix.test_type }}_results
           path: ./${{ matrix.test_type }}/resultados-testes-CI
           if-no-files-found: ignore
           retention-days: 2
@@ -48,7 +48,7 @@ jobs:
         if: always()
         uses: actions/download-artifact@v4
         with:
-          name: ${{ matrix.test_type }}-results
+          name: ${{ matrix.test_type }}_results
           path: ./resultados/${{ matrix.test_type }}
 
       - name: Debug - Verificar arquivos baixados
