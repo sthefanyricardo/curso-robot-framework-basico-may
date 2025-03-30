@@ -6,6 +6,7 @@ Library  SeleniumLibrary
 
 *** Variables ***
 ${BROWSER}  chrome
+${HEADLESS}  ${False}
 ${URL_AMAZON}  https://www.amazon.com.br/
 ${MENU_CATEGORIAS}  //div[@id='nav-main']
 ${SUBCATEGORIA_COMPUTADORES_E_INFORMATICA}  //li[@class='a-carousel-card dcl-carousel-element']//div[@class='a-cardui-footer dcl-card-footer']
@@ -21,7 +22,11 @@ ${BTN_GARANTIA_ESTENDIDA_PRODUTO}  //input[@class='a-button-input' and @type='su
 ###  KEYWORDS SETUP E TEARDOWN ###
 Abrir o navegador
   [Documentation]  keyword responsável por abrir o navegador escolhido
-  Open Browser  browser=chrome  options=add_experimental_option("detach", True)
+  IF  ${HEADLESS} == True or ${HEADLESS} == true
+    Open Browser  browser=${BROWSER}  options=options.add_argument("--headless=new")
+  ELSE
+    Open Browser  browser=${BROWSER}  options=add_experimental_option("detach", True) 
+  END
   Maximize Browser Window
 
 Fechar o navegador
