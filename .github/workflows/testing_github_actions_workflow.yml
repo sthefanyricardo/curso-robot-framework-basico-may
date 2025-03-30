@@ -26,13 +26,13 @@ jobs:
       - name: Run tests
         run: |
           if [ "${{ matrix.test_type }}" == "testes_web" ]; then
-            robot -d ./testes_web/resultados-testes-CI -v HEADLESS:true -v BROWSER:chrome -i CT01 -i CT02 testes_web/tests
+            robot -d ./resultados-testes-CI -v HEADLESS:true -v BROWSER:chrome -i CT01 -i CT02 testes_web/tests
           elif [ "${{ matrix.test_type }}" == "testes_API" ]; then
-            robot -d ./testes_API/resultados-testes-CI testes_API/tests
+            robot -d ./resultados-testes-CI testes_API/tests
           elif [ "${{ matrix.test_type }}" == "trabalhando_estruturas" ]; then
-            robot -d ./trabalhando_estruturas/resultados-testes-CI trabalhando_estruturas/tests
+            robot -d ./resultados-testes-CI trabalhando_estruturas/tests
           elif [ "${{ matrix.test_type }}" == "trabalhando_variaveis_escopos_argumentos" ]; then
-            robot -d ./trabalhando_variaveis_escopos_argumentos/resultados-testes-CI trabalhando_variaveis_escopos_argumentos/tests
+            robot -d ./resultados-testes-CI trabalhando_variaveis_escopos_argumentos/tests
           fi
 
       - name: Upload test results
@@ -40,7 +40,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: ${{ matrix.test_type }}_results
-          path: ./${{ matrix.test_type }}/resultados-testes-CI
+          path: ./resultados-testes-CI
           if-no-files-found: ignore
           retention-days: 2
   
