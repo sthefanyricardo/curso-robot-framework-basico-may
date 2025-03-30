@@ -8,7 +8,7 @@ Library  SeleniumLibrary
 *** Variables ***
 @{FRUTAS}  maça  banana  uva  abacaxi
 
-*** Test Case ***
+*** Test Cases ***
 Caso de teste exemplo 01
   Usando LOG para mensagens
   Usando LOG Console

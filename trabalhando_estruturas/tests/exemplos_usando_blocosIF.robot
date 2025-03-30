@@ -6,7 +6,7 @@ Test Teardown  Log To Console  ${\n}
 *** Variables ***
 ${STATUS}  ${0}
 
-*** Test Case ***
+*** Test Cases ***
 01: Exemplo bloco IF
   IF  ${STATUS} > 0
     Logar informações quando o status for maior que zero
