@@ -7,14 +7,17 @@ ${GLOBAL_INSTANCIADA}  Minha variável GLOBAL_INSTANCIADA foi instanciada para a
 
 *** Test Cases ***
 Caso de teste de exemplo 01
+  [Tags]  CT01
   Uma keyword qualquer 01
   Uma keyword qualquer 02
 
 Caso de teste de exemplo 02
+  [Tags]  CT02
   Uma keyword qualquer 02
   Uma keyword qualquer 03
 
 Caso de teste de exemplo 03
+  [Tags]  CT03
   Uma keyword qualquer 04
 
 *** Keywords ***
