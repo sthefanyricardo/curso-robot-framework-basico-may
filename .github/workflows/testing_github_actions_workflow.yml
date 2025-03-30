@@ -30,9 +30,9 @@ jobs:
           elif [ "${{ matrix.test_type }}" == "API" ]; then
             robot -d ./testes_API/resultados-testes-CI testes_API/tests
           elif [ "${{ matrix.test_type }}" == "estruturas" ]; then
-            robot -d ./trabalhando_estruturas/resultados-testes-CI trabalhando_estruturas/tests
+            robot -d ./estruturas/resultados-testes-CI trabalhando_estruturas/tests
           elif [ "${{ matrix.test_type }}" == "variaveis_escopos_argumentos" ]; then
-            robot -d ./trabalhando_variaveis_escopos_argumentos/resultados-testes-CI trabalhando_variaveis_escopos_argumentos/tests
+            robot -d ./variaveis_escopos_argumentos/resultados-testes-CI trabalhando_variaveis_escopos_argumentos/tests
           fi
 
       - name: Upload test results
